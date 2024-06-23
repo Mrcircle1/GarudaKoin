@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garuda Coin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="game-area">
+            <img id="coin" src="https://i.ibb.co.com/P54QJks/1719078389008t8ywliey.png" alt="Coin" onclick="earnPoints()">
+            <p id="points">Points: 0</p>
+        </div>
+        <div id="menu">
+            <button onclick="showTask()">Task</button>
+            <button onclick="showInvite()">Invite</button>
+            <button onclick="showWallet()">Wallet</button>
+            <button onclick="showBoost()">Boost</button>
+        </div>
+    </div>
+
+    <div id="popup" class="hidden">
+        <div id="popup-content">
+            <span id="popup-close" onclick="closePopup()">&#x2715;</span>
+            <div id="popup-text"></div>
+            <div id="task-options" class="hidden">
+                <button onclick="visitLink('Task 1', 'https://example.com')">Task 1</button>
+                <button onclick="visitLink('Task 2', 'https://example.com')">Task 2</button>
+                <button onclick="visitLink('Task 3', 'https://example.com')">Task 3</button>
+                <button onclick="visitLink('Task 4', 'https://example.com')">Task 4</button>
+                <button onclick="visitLink('Task 5', 'https://example.com')">Task 5</button>
+            </div>
+            <div id="boost-options" class="hidden">
+                <button id="boost1" onclick="upgradeBoost(1)">Boost 1: Level 1 (Cost: 10 points)</button>
+                <button onclick="selectBoost(2)">Boost 2</button>
+                <button onclick="selectBoost(3)">Boost 3</button>
+                <button onclick="selectBoost(4)">Boost 4</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
